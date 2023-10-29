@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tabla Personalizada</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <section>
+        <div class="sidebar">
+            <!-- aqui agregale un logo  -->
+            <img src="assets/logo.png" alt="Logo">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Control asistencia</a></li>
+                <li><a href="#">Reporte</a></li>
+                <li><a href="#">Salir</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:1;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="square" style="--i:5;"></div>
+                <div class="contenedor2">
+                    <div class="form">
+                        <h1>Control de asistencia</h1>
+                        <br>
+                        <div class="dropdown">
+                            <button class="dropbtn">Carreras</button>
+                            <div class="dropdown-content">
+                              <a href="#" onclick="showSelectedCareer('Ingeniería de Sistemas')">Ingeniería de Sistemas</a>
+                              <a href="#" onclick="showSelectedCareer('Parvularia')">Parvularia</a>
+                              <a href="#" onclick="showSelectedCareer('Derecho')">Derecho</a>
+                              <a href="#" onclick="showSelectedCareer('Contaduría')">Contaduría</a>
+                            </div>
+                          </div>
+                          
+                          <p id="selectedCareer"></p>
+
+                        <div class="data">
+                            <a href="#" class="agregar-btn">Agregar</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Hora</th>
+                                    <th>Materia</th>
+                                    <th>Docente</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>8:00 AM</td>
+                                    <td>Programacion</td>
+                                    <td>Juan Perez</td>
+                                    <!-- Agrega dos botones de accion -->
+                                    <td class="action">
+                                        <a href="#" class="edit-btn">Guardar</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>9:00 AM</td>
+                                    <td>Calculo Integral</td>
+                                    <td>Carlos Rodriguez</td>
+                                    <td class="action">
+                                        <a href="#" class="edit-btn">Editar</a>
+                                    </td>
+                                </tr>
+
+                                <!-- Agrega más filas según sea necesario -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+ //others
+ function showSelectedCareer(career) {
+    document.getElementById("selectedCareer").textContent = "Carrera: " + career;
+  }
+
+</script>
+
+</html>
